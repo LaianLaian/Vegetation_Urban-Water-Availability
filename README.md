@@ -1,12 +1,10 @@
-# Read me
-
-This repository contains all codes and relevant data used in the manuscript "Nonlinear vegetation controls on urban water availability emerge from precipitation–evapotranspiration coupling".
+This repository contains all code and relevant data used in the manuscript "Nonlinear vegetation controls on urban water availability emerge from precipitation–evapotranspiration coupling".
 
 ## Overview
 
 This repository provides:
 
-1. The R code used to fit conditional Vine Copula models linking precipitation (P), evapotranspiration (ET), urban vegetation (LAIur), and peri-urban vegetation (LAIperi).
+1. The R code used to fit Conditional Vine Copula models linking precipitation (P), evapotranspiration (ET), urban vegetation (LAIur), and peri-urban vegetation (LAIperi).
 2. The input datasets used for scenario simulations.
 3. The source data underlying the main figures presented in the manuscript.
 
@@ -68,11 +66,11 @@ Each column represents one city and each row represents one day.
 
 Main workflow for:
 
-* harmonic reconstruction of daily LAI dynamics;
-* empirical cumulative distribution function (CDF) transformation;
-* conditional Vine Copula fitting;
-* scenario-based simulation of precipitation and evapotranspiration;
-* calculation of urban water availability (WA).
+* Harmonic reconstruction of daily LAI dynamics;
+* Empirical cumulative distribution function (CDF) transformation;
+* Conditional Vine Copula fitting;
+* Scenario-based simulation of precipitation and evapotranspiration;
+* Calculation of urban water availability (WA).
 
 ### Required R Packages
 
@@ -136,7 +134,7 @@ Bayesian Information Criterion (BIC)
 ---
 ## Running the Code
 
-Place the following input files in the working directory:
+All required input datasets are included in this repository.
 
 - P19812023.xlsx
 - ET19812023.xlsx
@@ -155,3 +153,7 @@ The script will generate simulated daily precipitation (P), evapotranspiration (
 - Urban_Change
 - Periurban_Change
 - Both_Fixed
+---
+## License
+
+This repository is distributed under the MIT License.
