@@ -10,9 +10,7 @@ This repository provides:
 
 Urban water availability (WA) is defined as:
 
-```text
 WA = P − ET
-```
 
 The analysis includes 1,029 cities worldwide and covers the period 1981–2023 at daily temporal resolution.
 
@@ -23,25 +21,7 @@ The Vine Copula framework was used to characterize the dependence structure amon
 * **Urban Change scenario**: urban LAI fixed at +1 standard deviation relative to the baseline period, while peri-urban LAI remains at baseline.
 * **Peri-urban Change scenario**: peri-urban LAI fixed at +1 standard deviation relative to the baseline period, while urban LAI remains at baseline.
 
----
 
-## Repository Structure
-
-```text
-.
-├── Urban_WA_Scenario_Simulation.R
-│
-├── P19812023.xlsx
-├── ET19812023.xlsx
-├── LAI19812023ur.xlsx
-├── LAI19812023peri.xlsx
-│
-├── SourceData_Fig.2.xlsx
-├── SourceData_Fig.3.xlsx
-├── SourceData_Fig.4.xlsx
-├── SourceData_Fig.5.xlsx
-└── SourceData_Fig.6.xlsx
-```
 
 ---
 
@@ -49,12 +29,14 @@ The Vine Copula framework was used to characterize the dependence structure amon
 
 The following files are required to run the simulation model:
 
-| File                   | Description                                      |
-| ---------------------- | ------------------------------------------------ |
-| `P19812023.xlsx`       | Daily precipitation time series (1981–2023)      |
-| `ET19812023.xlsx`      | Daily evapotranspiration time series (1981–2023) |
-| `LAI19812023ur.xlsx`   | Daily urban LAI time series (1981–2023)          |
-| `LAI19812023peri.xlsx` | Daily peri-urban LAI time series (1981–2023)     |
+- P19812023.xlsx       : Daily precipitation time series (1981–2023)      
+
+- ET19812023.xlsx      : Daily evapotranspiration time series (1981–2023) 
+
+- LAI19812023ur.xlsx   : Daily urban LAI time series (1981–2023)          
+
+- LAI19812023peri.xlsx : Daily peri-urban LAI time series (1981–2023)     
+
 
 Each column represents one city and each row represents one day.
 
@@ -62,7 +44,7 @@ Each column represents one city and each row represents one day.
 
 ## Code
 
-### `Urban_WA_Scenario_Simulation.R`
+`Urban_WA_Scenario_Simulation.R`
 
 Main workflow for:
 
@@ -74,12 +56,11 @@ Main workflow for:
 
 ### Required R Packages
 
-```r
 VineCopula
 CDVineCopulaConditional
 openxlsx
 readxl
-```
+
 
 ---
 
@@ -87,13 +68,11 @@ readxl
 
 The following files contain the numerical source data used to generate figures in the main manuscript:
 
-| File                    | Figure   |
-| ----------------------- | -------- |
-| `SourceData_Fig.2.xlsx` | Figure 2 |
-| `SourceData_Fig.3.xlsx` | Figure 3 |
-| `SourceData_Fig.4.xlsx` | Figure 4 |
-| `SourceData_Fig.5.xlsx` | Figure 5 |
-| `SourceData_Fig.6.xlsx` | Figure 6 |
+- SourceData_Fig.2.xlsx : Figure 2 
+- SourceData_Fig.3.xlsx : Figure 3 
+- SourceData_Fig.4.xlsx : Figure 4 
+- SourceData_Fig.5.xlsx : Figure 5 
+- SourceData_Fig.6.xlsx : Figure 6 
 
 Figure 1 presents the conceptual framework and therefore does not contain source data.
 
@@ -143,9 +122,8 @@ All required input datasets are included in this repository.
 
 Run:
 
-```r
 source("Urban_WA_Scenario_Simulation.R")
-```
+
 
 The script will generate simulated daily precipitation (P), evapotranspiration (ET), and water availability (WA) for all cities under four vegetation scenarios:
 
