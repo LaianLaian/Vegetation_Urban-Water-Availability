@@ -10,7 +10,7 @@ This repository provides:
 
 Urban water availability (WA) is defined as:
 
-WA = P − ET
+- WA = P − ET
 
 The analysis includes 1,029 cities worldwide and covers the period 1981–2023 at daily temporal resolution.
 
@@ -42,9 +42,13 @@ Each column represents one city and each row represents one day.
 
 ---
 
-## Code
+## Reproducibility
 
-`Urban_WA_Scenario_Simulation.R`
+### Code
+
+- Urban_WA_Scenario_Simulation.R
+
+The script will generate simulated daily precipitation (P), evapotranspiration (ET), and water availability (WA) for all cities under four vegetation scenarios.
 
 Main workflow for:
 
@@ -57,35 +61,12 @@ Main workflow for:
 ### Required R Packages
 
 VineCopula
+
 CDVineCopulaConditional
+
 openxlsx
+
 readxl
-
-
----
-
-## Source Data for Figures
-
-The following files contain the numerical source data used to generate figures in the main manuscript:
-
-- SourceData_Fig.2.xlsx : Figure 2 
-- SourceData_Fig.3.xlsx : Figure 3 
-- SourceData_Fig.4.xlsx : Figure 4 
-- SourceData_Fig.5.xlsx : Figure 5 
-- SourceData_Fig.6.xlsx : Figure 6 
-
-Figure 1 presents the conceptual framework and therefore does not contain source data.
-
----
-## Computing Environment
-
-The analyses were conducted under the following environment:
-
-- Operating System: Windows 11
-- R version: 4.4.3
-
-
-## Reproducibility
 
 ### Study Period
 
@@ -111,26 +92,18 @@ Bayesian Information Criterion (BIC)
 4. Peri-urban LAI (LAIperi)
 
 ---
-## Running the Code
+## Source Data for Figures
 
-All required input datasets are included in this repository.
+The following files contain the numerical source data used to generate figures in the main manuscript:
 
-- P19812023.xlsx
-- ET19812023.xlsx
-- LAI19812023ur.xlsx
-- LAI19812023peri.xlsx
+- SourceData_Fig.2.xlsx : Figure 2 
+- SourceData_Fig.3.xlsx : Figure 3 
+- SourceData_Fig.4.xlsx : Figure 4 
+- SourceData_Fig.5.xlsx : Figure 5 
+- SourceData_Fig.6.xlsx : Figure 6 
 
-Run:
+Figure 1 presents the conceptual framework and therefore does not contain source data.
 
-source("Urban_WA_Scenario_Simulation.R")
-
-
-The script will generate simulated daily precipitation (P), evapotranspiration (ET), and water availability (WA) for all cities under four vegetation scenarios:
-
-- Both_Dynamic
-- Urban_Change
-- Periurban_Change
-- Both_Fixed
 ---
 ## License
 
